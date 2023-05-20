@@ -1,0 +1,52 @@
+{
+  "name": "textexpander",
+  "version": "1.0.0",
+  "description": "TextExpander is a React component designed to manage long blocks of text that might need to be truncated for display purposes. With TextExpander, developers can easily set a limit on the number of characters initially displayed, providing a clean, condensed view. Users can then click on a 'Show more' link to reveal the full text, and 'Show less' to condense it again. This makes TextExpander an ideal tool for situations where space is limited but it's important to give users access to full content if they wish.",
+  "main": "index.ts",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github:camillo18tre/react-text-expander"
+  },
+  "keywords": [
+    "react",
+    "next.js",
+    "show more",
+    "show partial text",
+    "show-more fix",
+    "multiline",
+    "show text",
+    "hide text",
+    "show more text",
+    "text",
+    "expander",
+    "truncate",
+    "ellipsis",
+    "show-more",
+    "hide partial text",
+    "component",
+    "ui",
+    "read-more",
+    "expandable-text",
+    "javascript",
+    "npm",
+    "node"
+  ],
+  "author": "Camillo Alexandre Bovio",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "16 - 18.x"
+  },
+  "bugs": {
+    "url": "https://github.com/camillo18tre/react-text-expander/issues"
+  },
+  "homepage": "https://github.com/camillo18tre/react-text-expander#readme",
+  "devDependencies": {
+    "@types/react": "^18.2.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.0.4"
+  }
+}
