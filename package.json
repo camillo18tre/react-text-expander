@@ -2,9 +2,18 @@
   "name": "textexpander",
   "version": "1.0.0",
   "description": "TextExpander is a React component designed to manage long blocks of text that might need to be truncated for display purposes. With TextExpander, developers can easily set a limit on the number of characters initially displayed, providing a clean, condensed view. Users can then click on a 'Show more' link to reveal the full text, and 'Show less' to condense it again. This makes TextExpander an ideal tool for situations where space is limited but it's important to give users access to full content if they wish.",
-  "main": "index.ts",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
   "scripts": {
-    "test": "test"
+    "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
+    "prettier": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\"",
+    "test": "jest --config jestconfig.json",
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run prettier && npm run lint"
   },
   "repository": {
     "type": "git",
@@ -34,19 +43,38 @@
     "npm",
     "node"
   ],
-  "author": "Camillo Alexandre Bovio",
-  "license": "ISC",
+  "author": "Camillo Alexandre Bovio (camillo18tre)",
+  "license": "MIT",
   "peerDependencies": {
-    "react": "16 - 18.x"
+    "react": ">=16"
   },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
   "bugs": {
     "url": "https://github.com/camillo18tre/react-text-expander/issues"
   },
   "homepage": "https://github.com/camillo18tre/react-text-expander#readme",
   "devDependencies": {
+    "@testing-library/react": "^14.0.0",
+    "@types/jest": "^29.5.1",
     "@types/react": "^18.2.6",
+    "@typescript-eslint/eslint-plugin": "^5.59.6",
+    "@typescript-eslint/parser": "^5.59.6",
+    "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "jest": "^29.5.0",
+    "jest-canvas-mock": "^2.5.1",
+    "jest-environment-jsdom": "^29.5.0",
+    "prettier": "^2.8.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "ts-jest": "^29.1.0",
     "typescript": "^5.0.4"
   }
 }
