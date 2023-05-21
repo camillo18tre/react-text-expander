@@ -4,7 +4,7 @@ export type TextExpanderType = {
   showMoreLabel: string
   showLessLabel: string
   textClassName?: string | undefined
-  textStyle?: {} | undefined
+  textStyle?: object | undefined
   buttonClassName?: string | undefined
-  buttonStyle?: {} | undefined
+  buttonStyle?: object | undefined
 }
