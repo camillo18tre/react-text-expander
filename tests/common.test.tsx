@@ -14,6 +14,7 @@ describe('Common render', () => {
         showLessLabel='Show less...'
         textClassName='text-red-500'
         buttonClassName='bg-red-500'
+        isExpanded
       >
         This is the child text to test my component
       </TextExpander>,

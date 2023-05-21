@@ -10,8 +10,9 @@ export default function TextExpander({
   textStyle,
   buttonClassName,
   buttonStyle,
+  isExpanded = false,
 }: TextExpanderType) {
-  const [isTruncated, setIsTruncated] = useState(true)
+  const [isTruncated, setIsTruncated] = useState(isExpanded)
 
   const truncateStyles: React.CSSProperties = isTruncated
     ? {

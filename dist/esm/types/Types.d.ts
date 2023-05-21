@@ -7,4 +7,5 @@ export type TextExpanderType = {
     textStyle?: object | undefined;
     buttonClassName?: string | undefined;
     buttonStyle?: object | undefined;
+    isExpanded?: boolean;
 };
