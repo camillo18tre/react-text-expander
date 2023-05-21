@@ -1,5 +1,5 @@
 {
-  "name": "textexpander",
+  "name": "react-text-expander",
   "version": "1.0.0",
   "description": "TextExpander is a React component designed to manage long blocks of text that might need to be truncated for display purposes. With TextExpander, developers can easily set a limit on the number of characters initially displayed, providing a clean, condensed view. Users can then click on a 'Show more' link to reveal the full text, and 'Show less' to condense it again. This makes TextExpander an ideal tool for situations where space is limited but it's important to give users access to full content if they wish.",
   "main": "./dist/cjs/index.js",
@@ -12,6 +12,9 @@
     "build": "npm run build:esm && npm run build:cjs",
     "build:esm": "tsc",
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "build:esm:watch": "tsc -w",
+    "build:cjs:watch": "tsc --module commonjs --outDir dist/cjs -w",
+    "build:watch": "concurrently \"npm run build:esm:watch\" \"npm run build:cjs:watch\"",
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run prettier && npm run lint"
   },
@@ -63,6 +66,7 @@
     "@types/react": "^18.2.6",
     "@typescript-eslint/eslint-plugin": "^5.59.6",
     "@typescript-eslint/parser": "^5.59.6",
+    "concurrently": "^8.0.1",
     "eslint": "^8.41.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
