@@ -3,9 +3,9 @@ import type { TextExpanderType } from '../types/Types'
 
 export default function TextExpander({
   children,
-  lines,
-  showLessLabel,
-  showMoreLabel,
+  lines = 3,
+  showLessLabel = 'less',
+  showMoreLabel = 'more',
   textClassName,
   textStyle,
   buttonClassName,
