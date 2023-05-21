@@ -4,7 +4,7 @@ var tslib_1 = require("tslib");
 var react_1 = tslib_1.__importStar(require("react"));
 function TextExpander(_a) {
     var children = _a.children, lines = _a.lines, showLessLabel = _a.showLessLabel, showMoreLabel = _a.showMoreLabel, textClassName = _a.textClassName, textStyle = _a.textStyle, buttonClassName = _a.buttonClassName, buttonStyle = _a.buttonStyle, _b = _a.isExpanded, isExpanded = _b === void 0 ? false : _b;
-    var _c = (0, react_1.useState)(isExpanded), isTruncated = _c[0], setIsTruncated = _c[1];
+    var _c = (0, react_1.useState)(!isExpanded), isTruncated = _c[0], setIsTruncated = _c[1];
     var truncateStyles = isTruncated
         ? {
             display: '-webkit-box',
